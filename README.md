@@ -1,6 +1,6 @@
-# `devtools-perf-tricks`
+# `devtools-perf-flags`
 
-Chrome DevTools have a bunch of advanced undocumented features. Some of them are tremendously useful during performance profiling. This repo is an attempt to document them.
+Chrome DevTools have a bunch of advanced undocumented flags and features. Some of them are tremendously useful during performance profiling. This repo attempts to document them.
 
 Contents:
 
@@ -81,6 +81,5 @@ https://user-images.githubusercontent.com/2953267/218892333-53a812ff-9eea-4ad2-9
 In the bottom part of the selection, you’ll see exactly how long it is:
 
 ![](https://user-images.githubusercontent.com/2953267/218892846-01a5654d-7a2c-4d14-b844-21b8cff51598.jpg)
-
 
 **How to enable:** this is enabled by default but is surprisingly hard to discover.
