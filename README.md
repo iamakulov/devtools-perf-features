@@ -1,4 +1,4 @@
-# `devtools-perf-flags`
+# `devtools-perf-features`
 
 Chrome DevTools have a bunch of advanced undocumented flags and features. Some of them are tremendously useful during performance profiling. This repo attempts to document them.
 
