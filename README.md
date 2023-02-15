@@ -1,18 +1,19 @@
 # `devtools-perf-tricks`
 
-Chrome DevTools have a bunch of advanced undocumented settings hidden in Settings → Experiments. Some of them are tremendously useful during performance profiling.
+Chrome DevTools have a bunch of advanced undocumented features. Some of them are tremendously useful during performance profiling. This repo is an attempt to document them.
 
 Contents:
 
 - [Timeline: event initiators](#timeline-event-initiators)
 - [Timeline: show all events](#timeline-show-all-events)
 - [Timeline: invalidation tracking](#timeline-invalidation-tracking)
+- [Measuring a part of the recording](#measuring-a-part-of-the-recording)
 
 ## Timeline: event initiators
 
 The _Settings → Experiments → Timeline: event initiators_ setting enables little arrows between the “Timer Fired”, “Animation Frame Fired”, etc. frames – and the code that called `setTimeout()`, `requestAnimationFrame()`, etc.:
 
-<img width="1312" alt="CleanShot 2023-02-15 at 00 05 52@2x" src="https://user-images.githubusercontent.com/2953267/218883252-0a65290f-7cc0-471c-b6c5-0b28984ea6d0.png">
+<img width="1312" alt="" src="https://user-images.githubusercontent.com/2953267/218883252-0a65290f-7cc0-471c-b6c5-0b28984ea6d0.png">
 
 Works for:
 
@@ -47,9 +48,9 @@ The _Settings → Experiments → Timeline: invalidation tracking_ setting makes
 | <img width="1012" alt="CleanShot 2023-02-15 at 00 50 39@2x" src="https://user-images.githubusercontent.com/2953267/218889227-0d076d6f-a32f-4304-9828-e7995fa88e8a.png"> | <img width="1012" alt="CleanShot 2023-02-15 at 00 52 20@2x" src="https://user-images.githubusercontent.com/2953267/218889274-0d4a112c-1ad1-4350-a71e-8401b6c330bd.png"> |
 | <img width="1012" alt="CleanShot 2023-02-15 at 00 50 43@2x" src="https://user-images.githubusercontent.com/2953267/218889252-77f446c7-cb8f-4a34-b0cd-06b9c4718cbf.png"> | <img width="1012" alt="CleanShot 2023-02-15 at 00 52 29@2x" src="https://user-images.githubusercontent.com/2953267/218889295-091691a7-536e-435a-971e-2447c3fa2c56.png">
 
-This is useful to debug layout thrashing in more details.
+This is useful to debug [layout trashing](https://gist.github.com/paulirish/5d52fb081b3570c81e3a).
 
-Here’s how the behavior differs:
+Here’s how the setting changes the DevTools’ behavior:
 
 - Without the setting, DevTools only show the first place that invalidated styles or layout. This means that if you have code like this:
 
@@ -68,3 +69,18 @@ Note that enabling this setting makes all layout operations more expensive.
 More watching by Nolan Lawson: https://www.youtube.com/watch?v=nWcexTnvIKI
 
 **How to enable:** open DevTools settings (press F1) → Experiments → check “Timeline: invalidation tracking”.
+
+## Measuring a part of the recording
+
+To quickly measure a part of the recording, hold Shift and select that part of the trace:
+
+https://user-images.githubusercontent.com/2953267/218892333-53a812ff-9eea-4ad2-9116-2e7876051562.mov
+
+<br>
+
+In the bottom part of the selection, you’ll see exactly how long it is:
+
+![](https://user-images.githubusercontent.com/2953267/218892846-01a5654d-7a2c-4d14-b844-21b8cff51598.jpg)
+
+
+**How to enable:** this is enabled by default but is surprisingly hard to discover.
