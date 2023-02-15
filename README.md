@@ -59,9 +59,9 @@ Here’s how the behavior differs:
   document.querySelector('.sidebar').classList.add('sidebar_dark')
   ```
 
-  then DevTools will show “First Invalidated: <link to file and line>” – but only link to the first line.
+  then DevTools will only link to the first line.
 
-- With the setting, DevTools track every change that invalidates cached styles or layout – and prints links to all of them.
+- With the setting, DevTools track every change that invalidates cached styles or layout – and links to all of them.
 
 Note that enabling this setting makes all layout operations more expensive.
 
