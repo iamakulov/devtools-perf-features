@@ -11,7 +11,7 @@ Contents:
 
 ## Timeline: event initiators
 
-The _Settings → Experiments → Timeline: event initiators_ setting enables little arrows between the “Timer Fired”, “Animation Frame Fired”, etc. frames – and the code that called `setTimeout()`, `requestAnimationFrame()`, etc.:
+The _Settings → Experiments → Timeline: event initiators_ setting draws little arrows from code that calls `setTimeout()`, `requestAnimationFrame()`, etc. – to functions that fire as a result:
 
 <img width="1312" alt="" src="https://user-images.githubusercontent.com/2953267/218883252-0a65290f-7cc0-471c-b6c5-0b28984ea6d0.png">
 
