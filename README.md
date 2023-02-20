@@ -11,7 +11,7 @@ Contents:
 
 ## Timeline: event initiators
 
-The _Settings → Experiments → Timeline: event initiators_ setting draws little arrows from code that calls `setTimeout()`, `requestAnimationFrame()`, etc. – to functions that fire as a result:
+The _Settings → Experiments → Timeline: event initiators_ setting draws little arrows from code that calls `setTimeout()`, `requestAnimationFrame()`, etc. – to code that fires as a result:
 
 <img width="1312" alt="" src="https://user-images.githubusercontent.com/2953267/218883252-0a65290f-7cc0-471c-b6c5-0b28984ea6d0.png">
 
@@ -21,7 +21,7 @@ Works for:
 - Animation frames
 - Style and layout recalculations
 
-**How to enable:** open DevTools settings (press F1) → Experiments → check “Timeline: event initiators”.
+**How to enable:** open DevTools settings (press F1) → Experiments → check “Timeline: event initiators”. Then, select any timer callback in the performance trace.
 
 ## Timeline: show all events
 
