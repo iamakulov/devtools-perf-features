@@ -35,7 +35,7 @@ The _Settings → Experiments → Timeline: show all events_ setting makes DevTo
 
 Use this to:
 - see more details about what exactly the browser is doing and when
-- quickly jump to relevant places in the Chromium codebase: e.g., to find the what exactly `HTMLDocumentParser::PumpTokenizer` is doing, copy that string and paste it [into Chromium Code Search](https://source.chromium.org/search?q=HTMLDocumentParser::PumpTokenizer&sq=&ss=chromium)
+- quickly jump to relevant places in the Chromium codebase: e.g., to find the what exactly `HTMLDocumentParser::PumpTokenizer` is doing, copy that string and paste it [into Chromium Code Search](https://source.chromium.org/)
 
 **How to enable:** open DevTools settings (press F1) → Experiments → check “Timeline: show all events”.
 
